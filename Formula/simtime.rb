@@ -8,9 +8,9 @@ class Simtime < Formula
   desc "Control the wall-clock an iOS Simulator app sees (freeze/travel/scale)"
   homepage "https://github.com/MobAI-App/simtime"
   license "Apache-2.0"
-  version "0.1.0"
-  url "https://github.com/MobAI-App/simtime/releases/download/v#{version}/simtime-v#{version}-macos-arm64.tar.gz"
+  url "https://github.com/MobAI-App/simtime/releases/download/v0.1.0/simtime-v0.1.0-macos-arm64.tar.gz"
   sha256 "0ebcc9486d76c8e33ab4c67469ed005b132d87c02f9e49ac03daa186df36fa22"
+  version "0.1.0"
 
   # The runtime dylib is built against the iOS Simulator SDK and only loads
   # into simulator processes, so this is intrinsically macOS + Xcode-only.
