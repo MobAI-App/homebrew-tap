@@ -6,7 +6,7 @@ class Deskagent < Formula
   desc "ScreenCaptureKit-based macOS screen recorder + deterministic UI driver"
   homepage "https://github.com/mobai-app/desktop-recorder-skill"
   license "MIT"
-  version "0.2.1"
+  version "0.3.0"
 
   # macOS-only, Apple Silicon. Add an Intel block here later if you ship
   # a macos-13 / x86_64 build from CI.
@@ -14,7 +14,7 @@ class Deskagent < Formula
   depends_on arch: :arm64
 
   url "https://github.com/mobai-app/desktop-recorder-skill/releases/download/v#{version}/deskagent-v#{version}-macos-arm64.tar.gz"
-  sha256 "d4c2dcd0b9f51dcca82239224bc1efc0a716a8c2d96e45775e53e77fe5547027"
+  sha256 "e4b4b79ccc8256bf442d2531a5e9fbbe8a8ad7b449c55d868ac3cfd0b8fe284b"
 
   def install
     bin.install "deskagent"
