@@ -9,7 +9,7 @@ class Simtime < Formula
   homepage "https://github.com/MobAI-App/simtime"
   url "https://github.com/MobAI-App/simtime/releases/download/v0.1.0/simtime-v0.1.0-macos-arm64.tar.gz"
   version "0.1.0"
-  sha256 "0ebcc9486d76c8e33ab4c67469ed005b132d87c02f9e49ac03daa186df36fa22"
+  sha256 "24e19008a2893fd6aa80a77f439950b0135099d1f94c6fe574d2bdbd451b9b9c"
   license "Apache-2.0"
 
   # The runtime dylib is built against the iOS Simulator SDK and only loads
