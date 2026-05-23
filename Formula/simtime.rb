@@ -5,19 +5,18 @@
 # simtime repo). The sha256 is published next to the tarball as
 # `simtime-v<version>-macos-arm64.tar.gz.sha256`.
 class Simtime < Formula
-  desc "Control the wall-clock an iOS Simulator app sees (freeze / travel / scale / reset)"
+  desc "Control the wall-clock an iOS Simulator app sees (freeze/travel/scale)"
   homepage "https://github.com/MobAI-App/simtime"
   license "Apache-2.0"
   version "0.1.0"
+  url "https://github.com/MobAI-App/simtime/releases/download/v#{version}/simtime-v#{version}-macos-arm64.tar.gz"
+  sha256 "0ebcc9486d76c8e33ab4c67469ed005b132d87c02f9e49ac03daa186df36fa22"
 
   # The runtime dylib is built against the iOS Simulator SDK and only loads
   # into simulator processes, so this is intrinsically macOS + Xcode-only.
   # arm64-only for now; add an Intel block once CI ships an x86_64 build.
-  depends_on macos: :sonoma   # macOS 14.0+
   depends_on arch: :arm64
-
-  url "https://github.com/MobAI-App/simtime/releases/download/v#{version}/simtime-v#{version}-macos-arm64.tar.gz"
-  sha256 "0ebcc9486d76c8e33ab4c67469ed005b132d87c02f9e49ac03daa186df36fa22"
+  depends_on macos: :sonoma # macOS 14.0+
 
   def install
     # The real binary + the runtime dylib both live under libexec; a tiny
@@ -61,6 +60,6 @@ class Simtime < Formula
     # `simtime --help` is the safest non-stateful smoke check.
     assert_match "USAGE: simtime", shell_output("#{bin}/simtime --help")
     # Verify the wrapper points at a real dylib in the cellar.
-    assert_predicate libexec/"libsimtime.dylib", :exist?
+    assert_path_exists libexec/"libsimtime.dylib"
   end
 end
