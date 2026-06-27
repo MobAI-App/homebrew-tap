@@ -4,17 +4,17 @@
 # the GitHub Actions workflow prints (see RELEASING.md in the main repo).
 class Deskagent < Formula
   desc "ScreenCaptureKit-based macOS screen recorder + deterministic UI driver"
-  homepage "https://github.com/mobai-app/desktop-recorder-skill"
+  homepage "https://github.com/mobai-app/deskagent"
   license "MIT"
-  version "0.4.0"
+  version "0.4.1"
 
   # macOS-only, Apple Silicon. Add an Intel block here later if you ship
   # a macos-13 / x86_64 build from CI.
   depends_on macos: :sonoma   # macOS 14.0+ (ScreenCaptureKit content filter API)
   depends_on arch: :arm64
 
-  url "https://github.com/mobai-app/desktop-recorder-skill/releases/download/v#{version}/deskagent-v#{version}-macos-arm64.tar.gz"
-  sha256 "9c4070750aa46bdfc1a4fa0dc351a0c4dce42da6b5117a871ee6c7643e16504e"
+  url "https://github.com/mobai-app/deskagent/releases/download/v#{version}/deskagent-v#{version}-macos-arm64.tar.gz"
+  sha256 "8498d0a17fb5064c2c5d2a6207ed6ccb6c4dab6bafb0916c19826193bcec0e06"
 
   def install
     bin.install "deskagent"
