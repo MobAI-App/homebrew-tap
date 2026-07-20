@@ -13,7 +13,7 @@ class Simslim < Formula
   depends_on :macos
 
   url "https://github.com/mobai-app/simslim/releases/download/v#{version}/simslim-v#{version}-macos-arm64.tar.gz"
-  sha256 "f15a6622de0bfd5022ff15bed24679371975595ef5f768cd14f4a67d315959c8"
+  sha256 "604dfe54a3ce2f4c7041d513b6f799a2294538d621bababc382ac5db192378c7"
 
   def install
     bin.install "simslim"
