@@ -1,29 +1,33 @@
-# Formula for simslim — slim iOS simulators to run many more on one Mac.
+# Formula for simslim: slim iOS simulators to run many more on one Mac.
 #
-# After each release, update both `version` and `sha256` to match the values
-# the GitHub Actions workflow prints.
+# Installs a prebuilt Homebrew bottle so `brew install` never runs a source
+# build (which triggers Xcode/Command-Line-Tools version checks). After each
+# release, update the source `sha256` and the bottle stanza from the values the
+# GitHub Actions release workflow prints.
 class Simslim < Formula
-  desc "Run more iOS simulators on one Mac by disabling background daemons they don't need"
+  desc "Run more iOS simulators on one Mac by disabling unneeded background daemons"
   homepage "https://github.com/mobai-app/simslim"
+  url "https://github.com/mobai-app/simslim/archive/refs/tags/v0.1.0.tar.gz"
+  sha256 "ff220b5c33c3830d438ce4a61b4b99f6103b2312db3e6b15b479bed2656763ee"
   license "MIT"
-  version "0.1.0"
 
-  # Apple Silicon build. Add an x86_64 block here if an Intel build ships.
+  bottle do
+    root_url "https://github.com/mobai-app/simslim/releases/download/v0.1.0"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "8b758fde7a7b2036fc08fb9a26eec6d00be7dee82418fc4e2add15bd6b6a0e62"
+  end
+
+  depends_on "go" => :build
   depends_on arch: :arm64
   depends_on :macos
 
-  url "https://github.com/mobai-app/simslim/releases/download/v#{version}/simslim-v#{version}-macos-arm64.tar.gz"
-  sha256 "5210c7e3c5217c9a06cc2b5115c154e36852663b4733ad8c75d592c0507c93f8"
-
   def install
-    bin.install "simslim"
+    system "go", "build", *std_go_args(ldflags: "-X main.version=#{version}")
   end
 
   def caveats
     <<~EOS
-      simslim drives Apple's iOS simulators, so it needs Xcode's command-line
-      tools installed:
-        xcode-select --install
+      simslim drives iOS simulators, so it needs Xcode with an iOS Simulator
+      runtime installed (not just the standalone Command Line Tools).
 
       Verify the CLI runs:
         simslim list
