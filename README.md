@@ -6,6 +6,7 @@ A [Homebrew tap](https://docs.brew.sh/Taps) for [MobAI](https://mobai.run) tools
 
 ```bash
 brew install mobai-app/tap/deskagent
+brew install mobai-app/tap/ios-builder   # installs the `builder` CLI
 ```
 
 Formulas live under [`Formula/`](./Formula/). Source code for each tool is in
