@@ -3,7 +3,7 @@
 #
 # The release workflow (.github/workflows/release.yml in the ios-builder repo)
 # uploads bare per-platform binaries and a `checksums.txt`. After each release,
-# bump the four release URLs (sed -i "" s/v0.3.1/v<new>/g) and paste the sha256s from:
+# bump the four release URLs (sed -i "" s/v0.4.0/v<new>/g) and paste the sha256s from:
 #   curl -sL https://github.com/MobAI-App/ios-builder/releases/download/v<version>/checksums.txt
 class IosBuilder < Formula
   desc "Build iOS apps from any OS via GitHub Actions, with hot reload on real devices"
@@ -17,23 +17,23 @@ class IosBuilder < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/MobAI-App/ios-builder/releases/download/v0.3.1/builder-darwin-arm64"
-      sha256 "372bee1323ad17a029b8e306705f6f6c51ae32c0ed1ba614528956d7bd173d7d"
+      url "https://github.com/MobAI-App/ios-builder/releases/download/v0.4.0/builder-darwin-arm64"
+      sha256 "91ebda7d3ff722030eb339802bae66c17a29eb62938b13c1fe81e13cb330ccf9"
     end
     on_intel do
-      url "https://github.com/MobAI-App/ios-builder/releases/download/v0.3.1/builder-darwin-amd64"
-      sha256 "bede842a05b798da7beb3f89fa8d750b8599bb0fff9b8d6aa73727323fd7e77f"
+      url "https://github.com/MobAI-App/ios-builder/releases/download/v0.4.0/builder-darwin-amd64"
+      sha256 "735697f2b2829eed5c6a5717120cea9b86011951a44aabad14be650d687dad6b"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/MobAI-App/ios-builder/releases/download/v0.3.1/builder-linux-arm64"
-      sha256 "8d020b05de1e86ab2a62198c9c4ae2f58a93ead2a0abcc7da47dd831725b1cb6"
+      url "https://github.com/MobAI-App/ios-builder/releases/download/v0.4.0/builder-linux-arm64"
+      sha256 "160321d79ea210feb1dbc202ac266c05da93695300cd47f327ecb56ee4cdd29d"
     end
     on_intel do
-      url "https://github.com/MobAI-App/ios-builder/releases/download/v0.3.1/builder-linux-amd64"
-      sha256 "e5d4b6795bc0c109bb2eca6d0f560d05efcd1dae3182a446d462d134d71fe59c"
+      url "https://github.com/MobAI-App/ios-builder/releases/download/v0.4.0/builder-linux-amd64"
+      sha256 "b86a0b2be01a50beb62116d19934a97690645d4bfc74d99d6f01a65491c7d8f5"
     end
   end
 
