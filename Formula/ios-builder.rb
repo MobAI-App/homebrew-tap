@@ -3,7 +3,7 @@
 #
 # The release workflow (.github/workflows/release.yml in the ios-builder repo)
 # uploads bare per-platform binaries and a `checksums.txt`. After each release,
-# bump the four release URLs (sed -i "" s/v0.10.0/v<new>/g) and paste the sha256s from:
+# bump the four release URLs (sed -i "" s/v0.11.0/v<new>/g) and paste the sha256s from:
 #   curl -sL https://github.com/MobAI-App/ios-builder/releases/download/v<version>/checksums.txt
 class IosBuilder < Formula
   desc "Build iOS apps via GitHub Actions, Codemagic, or Bitrise"
@@ -17,23 +17,23 @@ class IosBuilder < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/MobAI-App/ios-builder/releases/download/v0.10.0/builder-darwin-arm64"
-      sha256 "2c940f62ec51cdc05286ef9112eaca5cadb5e1db4542408c2cdf94b24376cde3"
+      url "https://github.com/MobAI-App/ios-builder/releases/download/v0.11.0/builder-darwin-arm64"
+      sha256 "8f8b753cdfc58c135ef66aebc07a7d2ddc9630435e2ebf76c7add541db329bd2"
     end
     on_intel do
-      url "https://github.com/MobAI-App/ios-builder/releases/download/v0.10.0/builder-darwin-amd64"
-      sha256 "e1021539902a49835f5e02e95f0f21b84de7e9b4c1ffc8c79bdd3a38c5b0abd9"
+      url "https://github.com/MobAI-App/ios-builder/releases/download/v0.11.0/builder-darwin-amd64"
+      sha256 "f256ea8e4ba07d24a8ab7532e8e46244165fbb7626f4ce1b7039aea30e0cb2ce"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/MobAI-App/ios-builder/releases/download/v0.10.0/builder-linux-arm64"
-      sha256 "50486644a87997ea8fd3e0f139190f65ec72e5ca7524272adda062332b820238"
+      url "https://github.com/MobAI-App/ios-builder/releases/download/v0.11.0/builder-linux-arm64"
+      sha256 "609b8bfe15f594b50134909ddfcc0cff06c4438d0db191880cd2d1aa6cfb66f9"
     end
     on_intel do
-      url "https://github.com/MobAI-App/ios-builder/releases/download/v0.10.0/builder-linux-amd64"
-      sha256 "ccc8ff99dc995911d2021ebfb9681a2e5cfe34efb7af3927e43a23aa9d3461bf"
+      url "https://github.com/MobAI-App/ios-builder/releases/download/v0.11.0/builder-linux-amd64"
+      sha256 "1f42e8d5928193422060b87c2bf1b9597ce3a7f40a64866783de8b300befc3f0"
     end
   end
 
