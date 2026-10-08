@@ -5,15 +5,15 @@
 # release, update the source `sha256` and the bottle stanza from the values the
 # GitHub Actions release workflow prints.
 class Simslim < Formula
-  desc "Run more iOS simulators on one Mac by disabling unneeded background daemons"
+  desc "Run more iOS, tvOS, watchOS, and visionOS simulators on one Mac by disabling unneeded background daemons"
   homepage "https://github.com/mobai-app/simslim"
-  url "https://github.com/mobai-app/simslim/archive/refs/tags/v0.11.0.tar.gz"
-  sha256 "ca597dcd017a11c18f1fecd90875c644ab6ca4dff2659e09a825905b5e48869f"
+  url "https://github.com/mobai-app/simslim/archive/refs/tags/v0.12.0.tar.gz"
+  sha256 "237483824795a1aaf5c22f62c96e6e40ea63eaec82ec4112e0a9d30a16855e79"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/mobai-app/simslim/releases/download/v0.11.0"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma: "06f27f469ba0b31837e34129c74191292fa057a280128e6629e1084f9459e327"
+    root_url "https://github.com/mobai-app/simslim/releases/download/v0.12.0"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "87dcc0028df706f02ac9eb5865a75fe3ce1c23934bc8858ec3d1dd6e0f8dc34e"
   end
 
   depends_on "go" => :build
