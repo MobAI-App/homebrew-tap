@@ -7,13 +7,13 @@
 class Simslim < Formula
   desc "Run more iOS, tvOS, watchOS, and visionOS simulators on one Mac by disabling unneeded background daemons"
   homepage "https://github.com/mobai-app/simslim"
-  url "https://github.com/mobai-app/simslim/archive/refs/tags/v0.12.2.tar.gz"
-  sha256 "6cfbfadfc53963919f09dfb0c35df250a7342664dde65b55f3fcaedc7fa5543f"
+  url "https://github.com/mobai-app/simslim/archive/refs/tags/v0.13.0.tar.gz"
+  sha256 "7616ebf0cd069b75d5de8f1f994114d140347e7c271da97899210fb05b45c7d1"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/mobai-app/simslim/releases/download/v0.12.2"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma: "a002a64db5c21d54cc9c2842298ab73798010afcb82e7c198ca7ee87060372b0"
+    root_url "https://github.com/mobai-app/simslim/releases/download/v0.13.0"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "f57b67347a9e5d33f1810d67b966c39204d05c7d08082e2eb85ef79a4a016e65"
   end
 
   depends_on "go" => :build
