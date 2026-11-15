@@ -9,7 +9,7 @@
 class MobaiCi < Formula
   desc "Run MobAI mobile UI tests on simulators, emulators and devices"
   homepage "https://github.com/MobAI-App/mobai-ci"
-  version "0.13.3"
+  version "0.14.0"
   license :cannot_represent
 
   livecheck do
@@ -19,23 +19,23 @@ class MobaiCi < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/MobAI-App/mobai-ci/releases/download/v0.13.3/mobai-ci_0.13.3_darwin_arm64.tar.gz"
-      sha256 "545911c32ff3e7f6910eafe9d35ca03f850eaab62fa199e4d7934c02ca26a488"
+      url "https://github.com/MobAI-App/mobai-ci/releases/download/v0.14.0/mobai-ci_0.14.0_darwin_arm64.tar.gz"
+      sha256 "fe7ef8f63e4aa1fd09131a1b47c7ca448201b937e7d1ce0bec41ef92f847733f"
     end
     on_intel do
-      url "https://github.com/MobAI-App/mobai-ci/releases/download/v0.13.3/mobai-ci_0.13.3_darwin_amd64.tar.gz"
-      sha256 "029f8e624682c71db2cd9433f88140be88ab02df1045d5409e17d31e3d861c05"
+      url "https://github.com/MobAI-App/mobai-ci/releases/download/v0.14.0/mobai-ci_0.14.0_darwin_amd64.tar.gz"
+      sha256 "4d4e7cc3c689f85f81047e3cc73c898d065f44c51210b93d6c6a26a6a153eb5f"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/MobAI-App/mobai-ci/releases/download/v0.13.3/mobai-ci_0.13.3_linux_arm64.tar.gz"
-      sha256 "121d0f0dd3ee1c965b2ea950c8c5dad717cd35b470e15adf5461cc6c34269159"
+      url "https://github.com/MobAI-App/mobai-ci/releases/download/v0.14.0/mobai-ci_0.14.0_linux_arm64.tar.gz"
+      sha256 "a8517d67cec73e051e226829ca029a70a18aa06d15a0a3ad78278cf955e2f8f5"
     end
     on_intel do
-      url "https://github.com/MobAI-App/mobai-ci/releases/download/v0.13.3/mobai-ci_0.13.3_linux_amd64.tar.gz"
-      sha256 "ec2d6852c62d6c90b42dbe3d3e00585710cd949cb2b86d59b2de3171d47d0e3a"
+      url "https://github.com/MobAI-App/mobai-ci/releases/download/v0.14.0/mobai-ci_0.14.0_linux_amd64.tar.gz"
+      sha256 "0c1454d72cdaffb36a4e20870f1e856a3d11714a3014c0d90ca042b6fb25c792"
     end
   end
 
